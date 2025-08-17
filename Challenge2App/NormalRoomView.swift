@@ -12,10 +12,16 @@ struct NormalRoomView: View {
         ZStack {
             Color(red: 255/255, green: 248/255, blue: 232/255)
                 .ignoresSafeArea()
-            Text("NormalRoomView")
+            
+            Image("Room")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 400, height: 370)
+            
+
+            }
         }
     }
-}
 
 #Preview {
     NormalRoomView()
