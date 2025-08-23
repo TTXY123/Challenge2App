@@ -14,165 +14,234 @@ struct ShopNormalRoomView: View {
                 Color(red: 255/255, green: 248/255, blue: 232/255)
                     .ignoresSafeArea()
 
-                ZStack {
-                    VStack {
+                VStack {
+                    Spacer()
+
+                    // Row 1 Title
+                    HStack {
                         Spacer()
-
-                        HStack {  //row 1 starts
-                            Spacer()
-                            Text("Beds")
-                                .font(.title)
-                            Spacer()
-                            Spacer()
-                            Spacer()
-                            Spacer()
-                            Spacer()
-                            Spacer()
-                            Spacer()
-                            Spacer()
-                        }
-
-                        HStack {
-                            Spacer()
-                            Button(action: {}) {
-                                Rectangle()
-                                    .frame(width: 120, height: 120)
-                                    .foregroundColor(.white)
-                                    .cornerRadius(15)
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 15)
-                                            .stroke(Color.black, lineWidth: 2))
-                            }
-                            Spacer()
-                            Button(action: {}) {
-                                Rectangle()
-                                    .frame(width: 120, height: 120)
-                                    .foregroundColor(.white)
-                                    .cornerRadius(15)
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 15)
-                                            .stroke(Color.black, lineWidth: 2))
-                            }
-                            Spacer()
-                            Button(action: {}) {
-                                Rectangle()
-                                    .frame(width: 120, height: 120)
-                                    .foregroundColor(.white)
-                                    .cornerRadius(15)
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 15)
-                                            .stroke(Color.black, lineWidth: 2))
-                            }
-                            Spacer()
-                        } //row 1 end
-
+                        Text("Beds")
+                            .font(.title)
                         Spacer()
-
-                        HStack {  //row 2 starts
-                            Spacer()
-                            Text("Furniture")
-                                .font(.title)
-                            Spacer()
-                            Spacer()
-                            Spacer()
-                            Spacer()
-                            Spacer()
-                            Spacer()
-                            Spacer()
-                            Spacer()
-                        }
-
-                        HStack {
-                            Spacer()
-                            Button(action: {}) {
-                                Rectangle()
-                                    .frame(width: 120, height: 120)
-                                    .foregroundColor(.white)
-                                    .cornerRadius(15)
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 15)
-                                            .stroke(Color.black, lineWidth: 2))
-                            }
-                            Spacer()
-                            Button(action: {}) {
-                                Rectangle()
-                                    .frame(width: 120, height: 120)
-                                    .foregroundColor(.white)
-                                    .cornerRadius(15)
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 15)
-                                            .stroke(Color.black, lineWidth: 2))
-                            }
-                            Spacer()
-                            Button(action: {}) {
-                                Rectangle()
-                                    .frame(width: 120, height: 120)
-                                    .foregroundColor(.white)
-                                    .cornerRadius(15)
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 15)
-                                            .stroke(Color.black, lineWidth: 2))
-                            }
-                            Spacer()
-                        } //row 2 end
-
                         Spacer()
-
-                        HStack {  //row 3 starts
-                            Spacer()
-                            Text("Utilities")
-                                .font(.title)
-                            Spacer()
-                            Spacer()
-                            Spacer()
-                            Spacer()
-                            Spacer()
-                            Spacer()
-                            Spacer()
-                            Spacer()
-                        }
-
-                        HStack {
-                            Spacer()
-                            Button(action: {}) {
-                                Rectangle()
-                                    .frame(width: 120, height: 120)
-                                    .foregroundColor(.white)
-                                    .cornerRadius(15)
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 15)
-                                            .stroke(Color.black, lineWidth: 2))
-                            }
-                            Spacer()
-                            Button(action: {}) {
-                                Rectangle()
-                                    .frame(width: 120, height: 120)
-                                    .foregroundColor(.white)
-                                    .cornerRadius(15)
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 15)
-                                            .stroke(Color.black, lineWidth: 2))
-                            }
-                            Spacer()
-                            Button(action: {}) {
-                                Rectangle()
-                                    .frame(width: 120, height: 120)
-                                    .foregroundColor(.white)
-                                    .cornerRadius(15)
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 15)
-                                            .stroke(Color.black, lineWidth: 2))
-                            }
-                            Spacer()
-                        } //row 3 end
-
+                        Spacer()
+                        Spacer()
+                        Spacer()
                         Spacer()
                         Spacer()
                         Spacer()
                     }
 
-                    .navigationTitle("Shop")
+                    // Row 1 Buttons
+                    HStack {
+                        Spacer()
+                        // Button 1 with CrappyBed
+                        Button(action: {}) {
+                            ZStack {
+                                Image("CrappyBed")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 80, height: 80)
+                                Rectangle()
+                                  .frame(width: 120, height: 120)
+                                    .foregroundColor(.white)
+                                  .cornerRadius(15)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 15)
+                                            .stroke(Color.black, lineWidth: 2)
+                                    )
+                            }
+                        }
+                        Spacer()
+                        // Button 2
+                        Button(action: {}) {
+                            ZStack {
+                                Rectangle()
+                                    .frame(width: 120, height: 120)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(15)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 15)
+                                            .stroke(Color.black, lineWidth: 2)
+                                    )
+                                Image("KingSizedBed")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 80, height: 80)
+                            }
+                        }
+                        Spacer()
+                        // Button 3
+                        Button(action: {}) {
+                            ZStack {
+                                Rectangle()
+                                    .frame(width: 120, height: 120)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(15)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 15)
+                                            .stroke(Color.black, lineWidth: 2)
+                                    )
+                                Image("Img")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 80, height: 80)
+                            }
+                        }
+                        Spacer()
+                    }
+
+                    Spacer()
+
+                    // Row 2 Title
+                    HStack {
+                        Spacer()
+                        Text("Furniture")
+                            .font(.title)
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                    }
+
+                    // Row 2 Buttons
+                    HStack {
+                        Spacer()
+                        Button(action: {}) {
+                            ZStack {
+                                Rectangle()
+                                    .frame(width: 120, height: 120)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(15)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 15)
+                                            .stroke(Color.black, lineWidth: 2)
+                                    )
+                                Image("Img")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 80, height: 80)
+                            }
+                        }
+                        Spacer()
+                        Button(action: {}) {
+                            ZStack {
+                                Rectangle()
+                                    .frame(width: 120, height: 120)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(15)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 15)
+                                            .stroke(Color.black, lineWidth: 2)
+                                    )
+                                Image("Img")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 80, height: 80)
+                            }
+                        }
+                        Spacer()
+                        Button(action: {}) {
+                            ZStack {
+                                Rectangle()
+                                    .frame(width: 120, height: 120)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(15)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 15)
+                                            .stroke(Color.black, lineWidth: 2)
+                                    )
+                                Image("Img")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 80, height: 80)
+                            }
+                        }
+                        Spacer()
+                    }
+
+                    Spacer()
+
+                    // Row 3 Title
+                    HStack {
+                        Spacer()
+                        Text("Utilities")
+                            .font(.title)
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                    }
+
+                    // Row 3 Buttons
+                    HStack {
+                        Spacer()
+                        Button(action: {}) {
+                            ZStack {
+                                Rectangle()
+                                    .frame(width: 120, height: 120)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(15)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 15)
+                                            .stroke(Color.black, lineWidth: 2)
+                                    )
+                                Image("Img")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 80, height: 80)
+                            }
+                        }
+                        Spacer()
+                        Button(action: {}) {
+                            ZStack {
+                                Rectangle()
+                                    .frame(width: 120, height: 120)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(15)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 15)
+                                            .stroke(Color.black, lineWidth: 2)
+                                    )
+                                Image("Img")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 80, height: 80)
+                            }
+                        }
+                        Spacer()
+                        Button(action: {}) {
+                            ZStack {
+                                Rectangle()
+                                    .frame(width: 120, height: 120)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(15)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 15)
+                                            .stroke(Color.black, lineWidth: 2)
+                                    )
+                                Image("Img")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 80, height: 80)
+                            }
+                        }
+                        Spacer()
+                    }
+
+                    Spacer()
+                    Spacer()
+                    Spacer()
                 }
+                .navigationTitle("Shop")
             }
         }
     }
