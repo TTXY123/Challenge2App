@@ -150,9 +150,8 @@ struct MyHotelView: View {
                     }
                 }
             }
+            .navigationTitle(" Hotel")
         }
-        .navigationTitle("My Hotel")
-
     }
 }
 
