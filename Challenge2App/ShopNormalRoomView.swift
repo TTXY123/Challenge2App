@@ -13,11 +13,11 @@ struct ShopNormalRoomView: View {
             ZStack {
                 Color(red: 255/255, green: 248/255, blue: 232/255)
                     .ignoresSafeArea()
-                
+
                 ZStack {
                     VStack {
                         Spacer()
-                        
+
                         HStack {  //row 1 starts
                             Spacer()
                             Text("Beds")
@@ -31,34 +31,43 @@ struct ShopNormalRoomView: View {
                             Spacer()
                             Spacer()
                         }
+
                         HStack {
                             Spacer()
-                            Rectangle()
-                                .frame(width: 120, height: 120)
-                                .foregroundColor(.white)
-                                .cornerRadius(15)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 15)
-                                        .stroke(Color.black, lineWidth: 2))
+                            Button(action: {}) {
+                                Rectangle()
+                                    .frame(width: 120, height: 120)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(15)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 15)
+                                            .stroke(Color.black, lineWidth: 2))
+                            }
                             Spacer()
-                            Rectangle()
-                                .frame(width: 120, height: 120)
-                                .foregroundColor(.white)
-                                .cornerRadius(15)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 15)
-                                        .stroke(Color.black, lineWidth: 2))
+                            Button(action: {}) {
+                                Rectangle()
+                                    .frame(width: 120, height: 120)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(15)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 15)
+                                            .stroke(Color.black, lineWidth: 2))
+                            }
                             Spacer()
-                            Rectangle()
-                                .frame(width: 120, height: 120)
-                                .foregroundColor(.white)
-                                .cornerRadius(15)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 15)
-                                        .stroke(Color.black, lineWidth: 2))
+                            Button(action: {}) {
+                                Rectangle()
+                                    .frame(width: 120, height: 120)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(15)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 15)
+                                            .stroke(Color.black, lineWidth: 2))
+                            }
                             Spacer()
                         } //row 1 end
+
                         Spacer()
+
                         HStack {  //row 2 starts
                             Spacer()
                             Text("Furniture")
@@ -72,33 +81,41 @@ struct ShopNormalRoomView: View {
                             Spacer()
                             Spacer()
                         }
+
                         HStack {
                             Spacer()
-                            Rectangle()
-                                .frame(width: 120, height: 120)
-                                .foregroundColor(.white)
-                                .cornerRadius(15)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 15)
-                                        .stroke(Color.black, lineWidth: 2))
+                            Button(action: {}) {
+                                Rectangle()
+                                    .frame(width: 120, height: 120)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(15)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 15)
+                                            .stroke(Color.black, lineWidth: 2))
+                            }
                             Spacer()
-                            Rectangle()
-                                .frame(width: 120, height: 120)
-                                .foregroundColor(.white)
-                                .cornerRadius(15)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 15)
-                                        .stroke(Color.black, lineWidth: 2))
+                            Button(action: {}) {
+                                Rectangle()
+                                    .frame(width: 120, height: 120)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(15)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 15)
+                                            .stroke(Color.black, lineWidth: 2))
+                            }
                             Spacer()
-                            Rectangle()
-                                .frame(width: 120, height: 120)
-                                .foregroundColor(.white)
-                                .cornerRadius(15)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 15)
-                                        .stroke(Color.black, lineWidth: 2))
+                            Button(action: {}) {
+                                Rectangle()
+                                    .frame(width: 120, height: 120)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(15)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 15)
+                                            .stroke(Color.black, lineWidth: 2))
+                            }
                             Spacer()
                         } //row 2 end
+
                         Spacer()
 
                         HStack {  //row 3 starts
@@ -114,45 +131,53 @@ struct ShopNormalRoomView: View {
                             Spacer()
                             Spacer()
                         }
+
                         HStack {
                             Spacer()
-                            Rectangle()
-                                .frame(width: 120, height: 120)
-                                .foregroundColor(.white)
-                                .cornerRadius(15)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 15)
-                                        .stroke(Color.black, lineWidth: 2))
+                            Button(action: {}) {
+                                Rectangle()
+                                    .frame(width: 120, height: 120)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(15)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 15)
+                                            .stroke(Color.black, lineWidth: 2))
+                            }
                             Spacer()
-                            Rectangle()
-                                .frame(width: 120, height: 120)
-                                .foregroundColor(.white)
-                                .cornerRadius(15)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 15)
-                                        .stroke(Color.black, lineWidth: 2))
+                            Button(action: {}) {
+                                Rectangle()
+                                    .frame(width: 120, height: 120)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(15)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 15)
+                                            .stroke(Color.black, lineWidth: 2))
+                            }
                             Spacer()
-                            Rectangle()
-                                .frame(width: 120, height: 120)
-                                .foregroundColor(.white)
-                                .cornerRadius(15)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 15)
-                                        .stroke(Color.black, lineWidth: 2))
+                            Button(action: {}) {
+                                Rectangle()
+                                    .frame(width: 120, height: 120)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(15)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 15)
+                                            .stroke(Color.black, lineWidth: 2))
+                            }
                             Spacer()
                         } //row 3 end
-                        Spacer()
-                        Spacer()
-                        Spacer()
 
+                        Spacer()
+                        Spacer()
+                        Spacer()
                     }
-                    
+
                     .navigationTitle("Shop")
                 }
             }
         }
     }
 }
+
 #Preview {
     ShopNormalRoomView()
 }
