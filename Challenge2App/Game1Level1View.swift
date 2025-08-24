@@ -36,14 +36,40 @@ struct Game1Level1View: View {
                 }
                 VStack {
                     Spacer()
-                    Image("StickMan")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 200, height: 200)
-                        .padding(.top, 50)
+                    HStack {
+                        Spacer()
+                        Spacer()
+                        Spacer()
+
+                        Image("StickMan")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 200, height: 200)
+                            .padding(.bottom, 100)
+
+                        Spacer()
+                    }
+                }
+                VStack {
+                    Spacer()
+                    HStack {
+                        Spacer()
+
+                        Circle()
+                            .fill(Color.white)
+                            .stroke(Color.black, lineWidth: 10)
+                            .frame(width: 100, height: 150)
+                            .padding()
+                        Spacer()
+                        Spacer()
+
+                    }
+                    Spacer()
+                    Spacer()
+                    Spacer()
+
 
                 }
-
             }
 
         }
