@@ -25,13 +25,23 @@ struct Game1Level1View: View {
                         .font(.title2)
                         .padding(.bottom, 30)
                     
+                    Spacer()
                     // Image
                     Image("Slope")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: 200, height: 100)
+                        .frame(width: 800, height: 400)
                     
                     Spacer()
+                }
+                VStack {
+                    Spacer()
+                    Image("StickMan")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 200, height: 200)
+                        .padding(.top, 50)
+
                 }
 
             }
