@@ -17,13 +17,13 @@ struct Alert5View: View {
             Spacer()
             Divider()
             HStack {
-                Button("Close") {
+                Button("Try again") {
                     shown.toggle()
                 }
                 .frame(width: UIScreen.main.bounds.width / 2 - 30, height: 40)
                 .foregroundColor(.white)
                 
-                NavigationLink("Ok") {
+                NavigationLink("Next question") {
                     EndQuizView()
                 }
                 .frame(width: UIScreen.main.bounds.width / 2 - 30, height: 40)
