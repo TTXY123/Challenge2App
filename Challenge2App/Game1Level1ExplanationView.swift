@@ -1,27 +1,26 @@
 //
-//  Game2View.swift
+//  Game1Level1ExplanationView.swift
 //  Challenge2App
 //
-//  Created by Tiffany on 23/8/25.
+//  Created by Tiffany on 30/8/25.
 //
 
 import SwiftUI
 
-struct Game2View: View {
+struct Game1Level1ExplanationView: View {
     var body: some View {
         NavigationStack {
             ZStack {
                 Color(red: 255/255, green: 248/255, blue: 232/255)
                     .ignoresSafeArea()
                 VStack {
-                    Text("Game 2")
+                    Text("Game 1")
                         .font(.largeTitle)
-                    Text("Objective: Build a house.")
+                    Text("Objective: Kill the stickman.")
                         .font(.title2)
                     Text("""
-                    Learning Objectives
-
-                    • Materials
+                    • Gravitational Forces were acting on the ball
+                    • Gravitational.....insert sci fact
                     """)
 
                         .font(.title2)
@@ -34,9 +33,9 @@ struct Game2View: View {
                             RoundedRectangle(cornerRadius: 15)
                                 .stroke(Color.black, lineWidth: 2))
                     NavigationLink {
-                        Game2Level2View()
+                        Game1Level2View()
                     } label: {
-                        Text("Start Game 2")
+                        Text("Start Level 2")
                             .font(.title2)
                             .foregroundColor(.black)
                             .padding(.vertical, 20)
@@ -52,7 +51,6 @@ struct Game2View: View {
         }
     }
 }
-
 #Preview {
-    Game2View()
+    Game1Level1ExplanationView()
 }

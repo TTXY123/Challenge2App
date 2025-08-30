@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SpriteKit
 
 @main
 struct Challenge2AppApp: App {
