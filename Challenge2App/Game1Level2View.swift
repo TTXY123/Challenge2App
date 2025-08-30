@@ -52,7 +52,7 @@ struct Game1Level2View: View {
                             )
                         
                             NavigationLink {
-                                Game1Level1ExplanationView()
+                                Game1Level2ExplanationView()
                             } label: {
                                 Text("Next->")
                                     .font(.title2)

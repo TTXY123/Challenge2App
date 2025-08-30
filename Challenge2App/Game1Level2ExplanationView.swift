@@ -1,5 +1,5 @@
 //
-//  Game1Level1ExplanationView.swift
+//  Game1Level2ExplanationView.swift
 //  Challenge2App
 //
 //  Created by Tiffany on 30/8/25.
@@ -7,20 +7,20 @@
 
 import SwiftUI
 
-struct Game1Level1ExplanationView: View {
+struct Game1Level2ExplanationView: View {
     var body: some View {
         NavigationStack {
             ZStack {
                 Color(red: 255/255, green: 248/255, blue: 232/255)
                     .ignoresSafeArea()
                 VStack {
-                    Text("Level 1")
+                    Text("Level 2")
                         .font(.largeTitle)
                     Text("Objective: Kill the stickman.")
                         .font(.title2)
                     Text("""
-                    • Gravitational Forces were acting on the ball
-                    • Gravitational.....insert sci fact
+                    • How many times did you have to push the ball this time?
+                    • More times. This is because...insert sci-
                     """)
 
                         .font(.title2)
@@ -33,9 +33,9 @@ struct Game1Level1ExplanationView: View {
                             RoundedRectangle(cornerRadius: 15)
                                 .stroke(Color.black, lineWidth: 2))
                     NavigationLink {
-                        Game1Level2View()
+                        Game1Level3View()
                     } label: {
-                        Text("Start Level 2")
+                        Text("Start Level 3")
                             .font(.title2)
                             .foregroundColor(.black)
                             .padding(.vertical, 20)
@@ -52,5 +52,5 @@ struct Game1Level1ExplanationView: View {
     }
 }
 #Preview {
-    Game1Level1ExplanationView()
+    Game1Level2ExplanationView()
 }

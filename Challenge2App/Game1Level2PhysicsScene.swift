@@ -42,7 +42,7 @@ class Game1Level2PhysicsScene: SKScene, SKPhysicsContactDelegate {
         // Physics body for circle
         circle.physicsBody = SKPhysicsBody(circleOfRadius: 50)
         circle.physicsBody?.affectedByGravity = true
-        circle.physicsBody?.friction = 100
+        circle.physicsBody?.friction = 200
         circle.physicsBody?.allowsRotation = true
         circle.physicsBody?.restitution = 0.1
 
@@ -110,6 +110,8 @@ class Game1Level2PhysicsScene: SKScene, SKPhysicsContactDelegate {
         slopePath.addLine(to: CGPoint(x: 65, y: 405))    // "flat" top part
         slopePath.addLine(to: CGPoint(x: 70, y: 400))    // "flat" top part
         slopePath.addLine(to: CGPoint(x: 75, y: 405))    // "flat" top part
+        slopePath.addLine(to: CGPoint(x: 80, y: 400))    // "flat" top part
+        slopePath.addLine(to: CGPoint(x: 85, y: 405))    // "flat" top part
 
 
 
