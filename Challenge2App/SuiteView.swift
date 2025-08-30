@@ -8,14 +8,46 @@
 import SwiftUI
 
 struct SuiteView: View {
-    var body: some View {
-        ZStack {
-            Color(red: 255/255, green: 248/255, blue: 232/255)
-                .ignoresSafeArea()
-            Text("SuiteView")
+        @State private var showModal = false
+        var body: some View {
+            NavigationStack {
+                ZStack {
+                    Color(red: 255/255, green: 248/255, blue: 232/255)
+                        .ignoresSafeArea()
+                    
+                    Image("Room")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 400, height: 370)
+                    
+                    VStack {
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                        HStack {
+                            Spacer()
+                            Spacer()
+                            Spacer()
+                            
+                            Button("Shop", systemImage: "plus.square.on.square") {
+                                showModal = true
+                            }
+                            .sheet(isPresented: $showModal) {
+                                ShopSuiteView()
+                            }
+                            Spacer()
+                        }
+                        Spacer()
+                        
+                    }
+                }
+                .navigationTitle("Room 4")
+                
+            }
         }
     }
-}
+
 
 #Preview {
     SuiteView()

@@ -1,0 +1,251 @@
+//
+//  ShopSuiteView.swift
+//  Challenge2App
+//
+//  Created by Tiffany on 30/8/25.
+//
+
+import SwiftUI
+
+struct ShopSuiteView: View {
+    var body: some View {
+        NavigationStack {
+            ZStack {
+                Color(red: 255/255, green: 248/255, blue: 232/255)
+                    .ignoresSafeArea()
+
+                VStack {
+                    Spacer()
+
+                    // Row 1 Title
+                    HStack {
+                        Spacer()
+                        Text("Beds")
+                            .font(.title)
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                    }
+
+                    // Row 1 Buttons
+                    HStack {
+                        Spacer()
+                        // Button 1 with CrappyBed
+                        Button(action: {}) {
+                            ZStack {
+                                Rectangle()
+                                    .frame(width: 120, height: 120)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(15)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 15)
+                                            .stroke(Color.black, lineWidth: 2)
+                                    )
+                                Image("SingleSizedBed")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 80, height: 80)
+                            }
+                        }
+                        Spacer()
+                        // Button 2
+                        Button(action: {}) {
+                            ZStack {
+                                Rectangle()
+                                    .frame(width: 120, height: 120)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(15)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 15)
+                                            .stroke(Color.black, lineWidth: 2)
+                                    )
+                                Image("KingSizedBed")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 80, height: 80)
+                            }
+                        }
+                        Spacer()
+                        // Button 3
+                        Button(action: {}) {
+                            ZStack {
+                                Rectangle()
+                                    .frame(width: 120, height: 120)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(15)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 15)
+                                            .stroke(Color.black, lineWidth: 2)
+                                    )
+                                Image("DecentKingSizedBed")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 80, height: 80)
+                            }
+                        }
+                        Spacer()
+                    }
+
+                    Spacer()
+
+                    // Row 2 Title
+                    HStack {
+                        Spacer()
+                        Text("Furniture")
+                            .font(.title)
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                    }
+
+                    // Row 2 Buttons
+                    HStack {
+                        Spacer()
+                        Button(action: {}) {
+                            ZStack {
+                                Rectangle()
+                                    .frame(width: 120, height: 120)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(15)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 15)
+                                            .stroke(Color.black, lineWidth: 2)
+                                    )
+                                Image("Lamp")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 80, height: 80)
+                            }
+                        }
+                        Spacer()
+                        Button(action: {}) {
+                            ZStack {
+                                Rectangle()
+                                    .frame(width: 120, height: 120)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(15)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 15)
+                                            .stroke(Color.black, lineWidth: 2)
+                                    )
+                                Image("Bookshelf")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 80, height: 80)
+                            }
+                        }
+                        Spacer()
+                        Button(action: {}) {
+                            ZStack {
+                                Rectangle()
+                                    .frame(width: 120, height: 120)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(15)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 15)
+                                            .stroke(Color.black, lineWidth: 2)
+                                    )
+                                Image("Armchair")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 80, height: 80)
+                            }
+                        }
+                        Spacer()
+                    }
+
+                    Spacer()
+
+                    // Row 3 Title
+                    HStack {
+                        Spacer()
+                        Text("Utilities")
+                            .font(.title)
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                    }
+
+                    // Row 3 Buttons
+                    HStack {
+                        Spacer()
+                        Button(action: {}) {
+                            ZStack {
+                                Rectangle()
+                                    .frame(width: 120, height: 120)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(15)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 15)
+                                            .stroke(Color.black, lineWidth: 2)
+                                    )
+                                Image("WashingMachine")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 80, height: 80)
+                            }
+                        }
+                        Spacer()
+                        Button(action: {}) {
+                            ZStack {
+                                Rectangle()
+                                    .frame(width: 120, height: 120)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(15)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 15)
+                                            .stroke(Color.black, lineWidth: 2)
+                                    )
+                                Image("CoffeeStation")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 80, height: 80)
+                            }
+                        }
+                        Spacer()
+                        Button(action: {}) {
+                            ZStack {
+                                Rectangle()
+                                    .frame(width: 120, height: 120)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(15)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 15)
+                                            .stroke(Color.black, lineWidth: 2)
+                                    )
+                                Image("KitchenCounter")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 80, height: 80)
+                            }
+                        }
+                        Spacer()
+                    }
+
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                }
+                .navigationTitle("Shop")
+            }
+        }
+    }
+}
+#Preview {
+    ShopSuiteView()
+}
