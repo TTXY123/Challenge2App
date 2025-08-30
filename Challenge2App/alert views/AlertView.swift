@@ -23,7 +23,7 @@ struct AlertView: View {
                 .frame(width: UIScreen.main.bounds.width / 2 - 30, height: 40)
                 .foregroundColor(.white)
                 
-                NavigationLink("Next Q=question") {
+                NavigationLink("Next question") {
                     Question2View()
                 }
                 .frame(width: UIScreen.main.bounds.width / 2 - 30, height: 40)
