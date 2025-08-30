@@ -42,9 +42,9 @@ class Game1Level2PhysicsScene: SKScene, SKPhysicsContactDelegate {
         // Physics body for circle
         circle.physicsBody = SKPhysicsBody(circleOfRadius: 50)
         circle.physicsBody?.affectedByGravity = true
-        circle.physicsBody?.friction = 50
+        circle.physicsBody?.friction = 100
         circle.physicsBody?.allowsRotation = true
-        circle.physicsBody?.restitution = 0.6
+        circle.physicsBody?.restitution = 0.1
 
         // Set category and collision/contact bit masks for circle
         circle.physicsBody?.categoryBitMask = PhysicsCategory.circle
@@ -114,7 +114,40 @@ class Game1Level2PhysicsScene: SKScene, SKPhysicsContactDelegate {
 
 
         // Bumpy Slope Section - from flat top to bottom right corner
-        slopePath.addLine(to: CGPoint(x: 200, y: 30))
+        slopePath.addLine(to: CGPoint(x: 200, y: 35))
+        slopePath.addLine(to: CGPoint(x: 205, y: 30))
+        slopePath.addLine(to: CGPoint(x: 210, y: 35))
+        slopePath.addLine(to: CGPoint(x: 215, y: 30))
+        slopePath.addLine(to: CGPoint(x: 220, y: 35))
+        slopePath.addLine(to: CGPoint(x: 225, y: 30))
+        slopePath.addLine(to: CGPoint(x: 230, y: 35))
+        slopePath.addLine(to: CGPoint(x: 235, y: 30))
+        slopePath.addLine(to: CGPoint(x: 240, y: 35))
+        slopePath.addLine(to: CGPoint(x: 245, y: 30))
+        slopePath.addLine(to: CGPoint(x: 250, y: 35))
+        slopePath.addLine(to: CGPoint(x: 255, y: 30))
+        slopePath.addLine(to: CGPoint(x: 260, y: 35))
+        slopePath.addLine(to: CGPoint(x: 265, y: 30))
+        slopePath.addLine(to: CGPoint(x: 270, y: 35))
+        slopePath.addLine(to: CGPoint(x: 275, y: 30))
+        slopePath.addLine(to: CGPoint(x: 280, y: 35))
+        slopePath.addLine(to: CGPoint(x: 285, y: 30))
+        slopePath.addLine(to: CGPoint(x: 290, y: 35))
+        slopePath.addLine(to: CGPoint(x: 295, y: 30))
+        slopePath.addLine(to: CGPoint(x: 300, y: 35))
+        slopePath.addLine(to: CGPoint(x: 305, y: 30))
+        slopePath.addLine(to: CGPoint(x: 310, y: 35))
+        slopePath.addLine(to: CGPoint(x: 315, y: 30))
+        slopePath.addLine(to: CGPoint(x: 320, y: 35))
+        slopePath.addLine(to: CGPoint(x: 325, y: 30))
+        slopePath.addLine(to: CGPoint(x: 330, y: 35))
+        slopePath.addLine(to: CGPoint(x: 335, y: 30))
+        slopePath.addLine(to: CGPoint(x: 340, y: 35))
+        slopePath.addLine(to: CGPoint(x: 345, y: 30))
+        slopePath.addLine(to: CGPoint(x: 350, y: 30))
+
+
+
         slopePath.addLine(to: CGPoint(x: 350, y: 30))
 
         slopePath.closeSubpath()
