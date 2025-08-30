@@ -1,5 +1,5 @@
 //
-//  Game1PhysicsScene.swift
+//  Game1Level2PhysicsScene.swift
 //  Challenge2App
 //
 //  Created by Tiffany on 30/8/25.
@@ -10,7 +10,7 @@ import SpriteKit
 
 
 
-class Game1PhysicsScene: SKScene, SKPhysicsContactDelegate {
+class Game1Level2PhysicsScene: SKScene, SKPhysicsContactDelegate {
 
     var circle: SKShapeNode!
     var touchStartPoint: CGPoint?
@@ -42,7 +42,7 @@ class Game1PhysicsScene: SKScene, SKPhysicsContactDelegate {
         // Physics body for circle
         circle.physicsBody = SKPhysicsBody(circleOfRadius: 50)
         circle.physicsBody?.affectedByGravity = true
-        circle.physicsBody?.friction = 0.5
+        circle.physicsBody?.friction = 50
         circle.physicsBody?.allowsRotation = true
         circle.physicsBody?.restitution = 0.6
 
@@ -71,14 +71,55 @@ class Game1PhysicsScene: SKScene, SKPhysicsContactDelegate {
 
         // Create slope
         let slopePath = CGMutablePath()
-        slopePath.move(to: CGPoint(x: 350, y: 0))
-        slopePath.addLine(to: CGPoint(x: 350, y: 0))
-        slopePath.addLine(to: CGPoint(x: -100, y: 0))
-        slopePath.addLine(to: CGPoint(x: -100, y: 400))
-        slopePath.addLine(to: CGPoint(x: 50, y: 400))
+        slopePath.move(to: CGPoint(x: 350, y: 0))  // bottom right
+        slopePath.addLine(to: CGPoint(x: -100, y: 0))  // bottom left
+        slopePath.addLine(to: CGPoint(x: -100, y: 400))  // top left corner
+        slopePath.addLine(to: CGPoint(x: -95, y: 400))    // "flat" top part
+        slopePath.addLine(to: CGPoint(x: -90, y: 405))    // "flat" top part
+        slopePath.addLine(to: CGPoint(x: -85, y: 400))    // "flat" top part
+        slopePath.addLine(to: CGPoint(x: -80, y: 405))    // "flat" top part
+        slopePath.addLine(to: CGPoint(x: -75, y: 400))    // "flat" top part
+        slopePath.addLine(to: CGPoint(x: -70, y: 405))    // "flat" top part
+        slopePath.addLine(to: CGPoint(x: -65, y: 400))    // "flat" top part
+        slopePath.addLine(to: CGPoint(x: -60, y: 405))    // "flat" top part
+        slopePath.addLine(to: CGPoint(x: -55, y: 400))    // "flat" top part
+        slopePath.addLine(to: CGPoint(x: -50, y: 405))    // "flat" top part
+        slopePath.addLine(to: CGPoint(x: -45, y: 400))    // "flat" top part
+        slopePath.addLine(to: CGPoint(x: -40, y: 405))    // "flat" top part
+        slopePath.addLine(to: CGPoint(x: -35, y: 400))    // "flat" top part
+        slopePath.addLine(to: CGPoint(x: -30, y: 405))    // "flat" top part
+        slopePath.addLine(to: CGPoint(x: -25, y: 400))    // "flat" top part
+        slopePath.addLine(to: CGPoint(x: -20, y: 405))    // "flat" top part
+        slopePath.addLine(to: CGPoint(x: -15, y: 400))    // "flat" top part
+        slopePath.addLine(to: CGPoint(x: -10, y: 405))    // "flat" top part
+        slopePath.addLine(to: CGPoint(x: -5, y: 400))    // "flat" top part
+        slopePath.addLine(to: CGPoint(x: -0, y: 405))    // "flat" top part
+        slopePath.addLine(to: CGPoint(x: 5, y: 400))    // "flat" top part
+        slopePath.addLine(to: CGPoint(x: 10, y: 405))    // "flat" top part
+        slopePath.addLine(to: CGPoint(x: 15, y: 400))    // "flat" top part
+        slopePath.addLine(to: CGPoint(x: 20, y: 405))    // "flat" top part
+        slopePath.addLine(to: CGPoint(x: 25, y: 400))    // "flat" top part
+        slopePath.addLine(to: CGPoint(x: 30, y: 405))    // "flat" top part
+        slopePath.addLine(to: CGPoint(x: 35, y: 400))    // "flat" top part
+        slopePath.addLine(to: CGPoint(x: 40, y: 405))    // "flat" top part
+        slopePath.addLine(to: CGPoint(x: 45, y: 400))    // "flat" top part
+        slopePath.addLine(to: CGPoint(x: 50, y: 405))    // "flat" top part
+        slopePath.addLine(to: CGPoint(x: 50, y: 400))    // "flat" top part
+        slopePath.addLine(to: CGPoint(x: 55, y: 405))    // "flat" top part
+        slopePath.addLine(to: CGPoint(x: 60, y: 400))    // "flat" top part
+        slopePath.addLine(to: CGPoint(x: 65, y: 405))    // "flat" top part
+        slopePath.addLine(to: CGPoint(x: 70, y: 400))    // "flat" top part
+        slopePath.addLine(to: CGPoint(x: 75, y: 405))    // "flat" top part
+
+
+
+        // Bumpy Slope Section - from flat top to bottom right corner
         slopePath.addLine(to: CGPoint(x: 200, y: 30))
         slopePath.addLine(to: CGPoint(x: 350, y: 30))
+
         slopePath.closeSubpath()
+
+        //end of slope
 
         let slope = SKShapeNode(path: slopePath)
         slope.fillColor = .gray
@@ -122,7 +163,6 @@ class Game1PhysicsScene: SKScene, SKPhysicsContactDelegate {
         touchStartPoint = nil
     }
 
-    // MARK: - SKPhysicsContactDelegate
 
     func didBegin(_ contact: SKPhysicsContact) {
         let bodyA = contact.bodyA
@@ -142,3 +182,5 @@ class Game1PhysicsScene: SKScene, SKPhysicsContactDelegate {
         }
     }
 }
+
+
