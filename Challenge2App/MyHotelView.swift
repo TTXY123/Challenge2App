@@ -38,11 +38,13 @@ struct MyHotelView: View {
                             NavigationLink {
                                 NormalRoomView()
                             } label: {
-                                Text("Enter Room 1")
+                                Text(" Room       ")
                                     .foregroundColor(.black)
                                     .padding()
+                                    .font(.system(size: 15))
                                     .background(Color.white)
                                     .cornerRadius(8)
+                                    
                             }
                             .padding()
                             Spacer()
@@ -69,9 +71,10 @@ struct MyHotelView: View {
                             NavigationLink {
                                 BuffetAreaView()
                             } label: {
-                                Text("Enter Room 3")
+                                Text("Buffet Area")
                                     .foregroundColor(.black)
                                     .padding()
+                                    .font(.system(size: 15))
                                     .background(Color.white)
                                     .cornerRadius(8)
                             }
@@ -104,9 +107,10 @@ struct MyHotelView: View {
                             NavigationLink {
                                 LoungeView()
                             } label: {
-                                Text("Enter Room 2")
+                                Text(" Lounge      ")
                                     .foregroundColor(.black)
                                     .padding()
+                                    .font(.system(size: 15))
                                     .background(Color.white)
                                     .cornerRadius(8)
                             }
@@ -135,9 +139,10 @@ struct MyHotelView: View {
                             NavigationLink {
                                 SuiteView()
                             } label: {
-                                Text("Enter Room 4")
+                                Text("Suite           ")
                                     .foregroundColor(.black)
                                     .padding()
+                                    .font(.system(size: 15))
                                     .background(Color.white)
                                     .cornerRadius(8)
                             }

@@ -22,14 +22,60 @@ struct Game1Level1View: View {
                 // SpriteKit view
                 VStack {
                     Spacer()
-                    HStack {
-                        SpriteView(scene: spriteScene)
-                            .frame(width: 400, height: 800)  // Match frame size to scene size
-                            .background(Color.clear)
-                    }
                     Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    
+                    
+                    Text("drag the ball")
+                        .foregroundColor(.black)
+                        .font(.title)
+                        HStack {
+                            SpriteView(scene: spriteScene)
+                                .frame(width: 400, height: 800)  // Match frame size to scene size
+                                .background(Color.clear)
+                        }
+                        Spacer()
+                    
+                    
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    
+                    
                 }
-                
                 // Win overlay
                 if gameState.didWin {
                     VStack(spacing: 20) {

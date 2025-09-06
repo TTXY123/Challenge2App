@@ -42,7 +42,7 @@ struct SuiteView: View {
                         
                     }
                 }
-                .navigationTitle("Room 4")
+                .navigationTitle("Suite")
                 
             }
         }
