@@ -1,26 +1,57 @@
-//
-//  ContentView.swift
-//  Challenge2App
-//
-//  Created by Tiffany on 16/8/25.
-//
-
 import SwiftUI
 
 struct ContentView: View {
+    @State private var Money = 0
+
     var body: some View {
-                
-                TabView {
-                    Tab("My Hotel", systemImage: "building") {
-                        MyHotelView()
+        ZStack {
+            TabView {
+                MyHotelView()
+                    .tabItem {
+                        Label("My Hotel", systemImage: "building")
                     }
-                    Tab("MCQ", systemImage: "checklist.checked.rtl") { MCQView()
+
+                MCQView(money: $Money)
+                    .tabItem {
+                        Label("MCQ", systemImage: "checklist.checked.rtl")
                     }
-                    Tab("Learn", systemImage: "questionmark") { LearnView() }
+
+                LearnView()
+                    .tabItem {
+                        Label("Learn", systemImage: "questionmark")
+                    }
+            }
+
+            VStack {
+                Spacer()
+                HStack {
+                    Spacer()
+                    Text("Money: \(Money)")
+                        .padding(8)
+                        .background(Color.white)
+                        .cornerRadius(10)
+                        .shadow(radius: 2)
+                        .padding(.trailing)
                 }
-                .navigationTitle("My Hotel")
+                Spacer()
+                Spacer()
+                Spacer()
+                Spacer()
+                Spacer()
+                Spacer()
+                Spacer()
+                Spacer()
+                Spacer()
+                Spacer()
+                Spacer()
+                Spacer()
+                Spacer()
+                Spacer()
+
             }
         }
+    }
+}
 
 #Preview {
     ContentView()

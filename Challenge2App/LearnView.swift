@@ -29,7 +29,7 @@ struct LearnView: View {
                     NavigationLink {
                         Game1View()
                     } label: {
-                        Text("Level 2")
+                        Text("Level 1")
                             .font(.title2)
                             .foregroundColor(.black)
                             .padding(.vertical, 40)
