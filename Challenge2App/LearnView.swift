@@ -16,7 +16,7 @@ struct LearnView: View {
                 VStack {
                     HStack {
                         Spacer()
-                        Text("Game 1")
+                        Text("Level 1")
                             .font(.title)
                         Spacer()
                         Spacer()
@@ -29,7 +29,7 @@ struct LearnView: View {
                     NavigationLink {
                         Game1View()
                     } label: {
-                        Text("Game 1")
+                        Text("Level 2")
                             .font(.title2)
                             .foregroundColor(.black)
                             .padding(.vertical, 40)
@@ -42,7 +42,7 @@ struct LearnView: View {
                     }
                         HStack {
                         Spacer()
-                        Text("Game 2")
+                        Text("Level 2")
                             .font(.title)
                         Spacer()
                         Spacer()
@@ -53,9 +53,9 @@ struct LearnView: View {
                         Spacer()
                     }
                     NavigationLink {
-                        Game2View()
+                        Game1Level2View()
                     } label: {
-                        Text("Game 2")
+                        Text("Level 2")
                             .font(.title2)
                             .foregroundColor(.black)
                             .padding(.vertical, 40)
@@ -69,7 +69,7 @@ struct LearnView: View {
 
                     HStack {
                         Spacer()
-                        Text("Game 3")
+                        Text("Level 3")
                             .font(.title)
                         Spacer()
                         Spacer()
@@ -80,9 +80,9 @@ struct LearnView: View {
                         Spacer()
                     }
                     NavigationLink {
-                        Game3View()
+                        Game1Level3View()
                     } label: {
-                        Text("Game 3")
+                        Text("Level 3")
                             .font(.title2)
                             .foregroundColor(.black)
                             .padding(.vertical, 40)
