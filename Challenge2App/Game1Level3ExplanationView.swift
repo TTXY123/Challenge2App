@@ -36,7 +36,7 @@ struct Game1Level3ExplanationView: View {
                     NavigationLink {
                         Game1Level3View()
                     } label: {
-                        Text("Start Level 4")
+                        Text("Press the Learn Tab to return")
                             .font(.title2)
                             .foregroundColor(.black)
                             .padding(.vertical, 20)

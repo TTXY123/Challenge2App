@@ -37,7 +37,7 @@ struct Game1View: View {
                     NavigationLink {
                         Game1Level1View()
                     } label: {
-                        Text("Start Game 1")
+                        Text("Start Level 1")
                             .font(.title2)
                             .foregroundColor(.black)
                             .padding(.vertical, 20)
