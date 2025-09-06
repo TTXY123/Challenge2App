@@ -36,13 +36,13 @@ class Game1Level3PhysicsScene: SKScene, SKPhysicsContactDelegate {
         circle.fillColor = .white
         circle.strokeColor = .black
         circle.lineWidth = 10
-        circle.position = CGPoint(x: size.width - 380, y: size.height - 50)
+        circle.position = CGPoint(x: size.width - 400, y: size.height - 50)
         circle.name = "circle"
 
         // Physics of circle
-        circle.physicsBody = SKPhysicsBody(circleOfRadius: 25)
+        circle.physicsBody = SKPhysicsBody(circleOfRadius: 20)
         circle.physicsBody?.affectedByGravity = true
-        circle.physicsBody?.friction = 0.5
+        circle.physicsBody?.friction = 0.1
         circle.physicsBody?.allowsRotation = true
         circle.physicsBody?.restitution = 0.6
 
@@ -57,7 +57,7 @@ class Game1Level3PhysicsScene: SKScene, SKPhysicsContactDelegate {
         let stickman = SKSpriteNode(imageNamed: "StickMan")
         stickman.name = "stickman"
         stickman.size = CGSize(width: 100, height: 150)
-        stickman.position = CGPoint(x: 370, y: 200)
+        stickman.position = CGPoint(x: 370, y: 250)
 
         // Physics body for stickman - static, no collisions but detects contact
         stickman.physicsBody = SKPhysicsBody(rectangleOf: stickman.size)
@@ -75,7 +75,7 @@ class Game1Level3PhysicsScene: SKScene, SKPhysicsContactDelegate {
         slopePath.addLine(to: CGPoint(x: 350, y: 0))
         slopePath.addLine(to: CGPoint(x: -100, y: 0))
         slopePath.addLine(to: CGPoint(x: -100, y: 400))
-        slopePath.addLine(to: CGPoint(x: -35, y: 400)) // end of flat top part
+        slopePath.addLine(to: CGPoint(x: -70, y: 400)) // end of flat top part
 
         //upside-down bowl shape
 
@@ -86,7 +86,10 @@ class Game1Level3PhysicsScene: SKScene, SKPhysicsContactDelegate {
         slopePath.addQuadCurve(to: CGPoint(x: 150, y: 180), control: CGPoint(x: 120, y: 100))
 
         
-        
+        slopePath.addLine(to: CGPoint(x: 150, y: 100)) // end of curve
+        slopePath.addLine(to: CGPoint(x: 300, y: 100)) // end of flat part for stickman to stand on
+
+
        // slopePath.addQuadCurve(to: CGPoint(x: -140, y: 200), control: CGPoint(x: -140, y: 30))
 
        // slopePath.addLine(to: CGPoint(x: 350, y: 30))
