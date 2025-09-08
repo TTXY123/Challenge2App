@@ -2,6 +2,18 @@ import SwiftUI
 
 struct ShopNormalRoomView: View {
     @ObservedObject var bedModel: CrappyBedModel
+    @ObservedObject var singleSizedBedModel: SingleSizedBedModel
+    @ObservedObject var kingSizedBedModel: KingSizedBedModel
+    @ObservedObject var lampModel: LampModel
+    @ObservedObject var bookshelfModel: BookshelfModel
+    @ObservedObject var armchairModel: ArmchairModel
+    @ObservedObject var washingMachineModel: WashingMachineModel
+    @ObservedObject var coffeeStationModel: CoffeeStationModel
+    @ObservedObject var kitchenCounterModel: KitchenCounterModel
+
+
+
+
 
     var body: some View {
         NavigationStack {
@@ -43,8 +55,10 @@ struct ShopNormalRoomView: View {
                             }
                         }
                         Spacer()
-                        // Button 2 - Placeholder
-                        Button(action: {}) {
+                        // Button 2
+                        Button(action: {
+                            singleSizedBedModel.isSingleSizedBedPurchased = true
+                        }) {
                             ZStack {
                                 Rectangle()
                                     .frame(width: 120, height: 120)
@@ -62,7 +76,9 @@ struct ShopNormalRoomView: View {
                         }
                         Spacer()
                         // Button 3 - Placeholder
-                        Button(action: {}) {
+                        Button(action: {
+                            kingSizedBedModel.isKingSizedBedPurchased = true
+                        }) {
                             ZStack {
                                 Rectangle()
                                     .frame(width: 120, height: 120)
@@ -89,7 +105,10 @@ struct ShopNormalRoomView: View {
                     // Placeholder Furniture Row
                     HStack {
                         Spacer()
-                        Button(action: {}) {
+                        Button(action: {
+                            lampModel.isLampPurchased = true
+                        }) {
+
                             ZStack {
                                 Rectangle()
                                     .frame(width: 120, height: 120)
@@ -106,7 +125,10 @@ struct ShopNormalRoomView: View {
                             }
                         }
                         Spacer()
-                        Button(action: {}) {
+                        Button(action: {
+                            bookshelfModel.isBookshelfPurchased = true
+                        }) {
+                
                             ZStack {
                                 Rectangle()
                                     .frame(width: 120, height: 120)
@@ -123,7 +145,10 @@ struct ShopNormalRoomView: View {
                             }
                         }
                         Spacer()
-                        Button(action: {}) {
+                        Button(action: {
+                            armchairModel.isArmchairPurchased = true
+
+                        }) {
                             ZStack {
                                 Rectangle()
                                     .frame(width: 120, height: 120)
@@ -151,7 +176,11 @@ struct ShopNormalRoomView: View {
                     // Placeholder Utility Row
                     HStack {
                         Spacer()
-                        Button(action: {}) {
+                        Button(action: {
+                            washingMachineModel.isWashingMachinePurchased = true
+
+                        }) {
+                       
                             ZStack {
                                 Rectangle()
                                     .frame(width: 120, height: 120)
@@ -168,7 +197,11 @@ struct ShopNormalRoomView: View {
                             }
                         }
                         Spacer()
-                        Button(action: {}) {
+                        Button(action: {
+                            coffeeStationModel.isCoffeeStationPurchased = true
+                        }) {
+                       
+   
                             ZStack {
                                 Rectangle()
                                     .frame(width: 120, height: 120)
@@ -185,7 +218,9 @@ struct ShopNormalRoomView: View {
                             }
                         }
                         Spacer()
-                        Button(action: {}) {
+                        Button(action: {
+                            kitchenCounterModel.isKitchenCounterPurchased = true
+                        }) {
                             ZStack {
                                 Rectangle()
                                     .frame(width: 120, height: 120)
@@ -213,5 +248,7 @@ struct ShopNormalRoomView: View {
 }
 
 #Preview {
-    ShopNormalRoomView(bedModel: CrappyBedModel())
+    ShopNormalRoomView(bedModel: CrappyBedModel(), singleSizedBedModel: SingleSizedBedModel(), kingSizedBedModel: KingSizedBedModel(), lampModel: LampModel(), bookshelfModel: BookshelfModel(), armchairModel: ArmchairModel(), washingMachineModel: WashingMachineModel(),
+                      coffeeStationModel: CoffeeStationModel(), kitchenCounterModel: KitchenCounterModel())
+
 }

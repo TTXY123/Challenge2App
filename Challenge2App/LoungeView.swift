@@ -34,7 +34,8 @@ struct LoungeView: View {
                             showModal = true
                         }
                         .sheet(isPresented: $showModal) {
-                            ShopNormalRoomView(bedModel: CrappyBedModel())
+                            ShopNormalRoomView(bedModel: CrappyBedModel(), singleSizedBedModel: SingleSizedBedModel(), kingSizedBedModel: KingSizedBedModel(), lampModel: LampModel(), bookshelfModel: BookshelfModel(), armchairModel: ArmchairModel(), washingMachineModel: WashingMachineModel(),
+                                               coffeeStationModel: CoffeeStationModel(), kitchenCounterModel: KitchenCounterModel())
                         }
                         Spacer()
                     }
