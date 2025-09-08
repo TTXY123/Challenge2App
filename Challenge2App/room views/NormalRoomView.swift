@@ -8,50 +8,64 @@
 import SwiftUI
 
 struct NormalRoomView: View {
-    @State private var showModal = false
-    @State private var XCoordinates: Double = 0
-    @State private var YCoordinates: Double = 0
-    var body: some View {
-        NavigationStack {
-            ZStack {
-                
+    @Binding var money: Int
+        @State private var showModal = false
+        @StateObject var bedModel = CrappyBedModel()
+
+        var body: some View {
+            NavigationStack {
                 ZStack {
                     Color(red: 255/255, green: 248/255, blue: 232/255)
                         .ignoresSafeArea()
-                    
+
                     Image("Room")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 400, height: 370)
-                    
+
+                    // Show bed if purchased
+                    if bedModel.isCrappyBedPurchased {
+                        Image("CrappyBed")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 80, height: 80)
+                            .position(x: 150, y: 400) // Adjust coordinates as needed
+                    }
+
                     VStack {
                         Spacer()
                         Spacer()
                         Spacer()
                         Spacer()
+                        Spacer()
+
                         HStack {
                             Spacer()
                             Spacer()
                             Spacer()
-                            
-                            Button("Shop", systemImage: "plus.square.on.square") {
+                            Spacer()
+                            Spacer()
+                            Spacer()
+
+                            Button("Shop") {
                                 showModal = true
                             }
+                            .padding()
                             .sheet(isPresented: $showModal) {
-                                ShopNormalRoomView()
+                                ShopNormalRoomView(bedModel: bedModel)
                             }
+
                             Spacer()
                         }
+
                         Spacer()
-                        
                     }
                 }
                 .navigationTitle("Room")
-                
             }
         }
     }
-}
-#Preview {
-    NormalRoomView()
-}
+
+    #Preview {
+        NormalRoomView(money: .constant(0))
+    }

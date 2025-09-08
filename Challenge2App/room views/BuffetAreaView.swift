@@ -34,7 +34,7 @@ struct BuffetAreaView: View {
                             showModal = true
                         }
                         .sheet(isPresented: $showModal) {
-                            ShopNormalRoomView()
+                            ShopNormalRoomView(bedModel: CrappyBedModel())
                         }
                         Spacer()
                     }

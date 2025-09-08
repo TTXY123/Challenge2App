@@ -36,7 +36,7 @@ struct MyHotelView: View {
                         VStack {
                             Spacer()
                             NavigationLink {
-                                NormalRoomView()
+                                NormalRoomView(money: .constant(0))
                             } label: {
                                 Text(" Room       ")
                                     .foregroundColor(.black)

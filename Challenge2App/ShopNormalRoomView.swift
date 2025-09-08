@@ -1,13 +1,8 @@
-//
-//  ShopNormalRoomView.swift
-//  Challenge2App
-//
-//  Created by Tiffany on 21/8/25.
-//
-
 import SwiftUI
 
 struct ShopNormalRoomView: View {
+    @ObservedObject var bedModel: CrappyBedModel
+
     var body: some View {
         NavigationStack {
             ZStack {
@@ -23,20 +18,15 @@ struct ShopNormalRoomView: View {
                         Text("Beds")
                             .font(.title)
                         Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
                     }
 
                     // Row 1 Buttons
                     HStack {
                         Spacer()
                         // Button 1 with CrappyBed
-                        Button(action: {}) {
+                        Button(action: {
+                            bedModel.isCrappyBedPurchased = true
+                        }) {
                             ZStack {
                                 Rectangle()
                                     .frame(width: 120, height: 120)
@@ -53,7 +43,7 @@ struct ShopNormalRoomView: View {
                             }
                         }
                         Spacer()
-                        // Button 2
+                        // Button 2 - Placeholder
                         Button(action: {}) {
                             ZStack {
                                 Rectangle()
@@ -71,7 +61,7 @@ struct ShopNormalRoomView: View {
                             }
                         }
                         Spacer()
-                        // Button 3
+                        // Button 3 - Placeholder
                         Button(action: {}) {
                             ZStack {
                                 Rectangle()
@@ -92,23 +82,11 @@ struct ShopNormalRoomView: View {
                     }
 
                     Spacer()
+                    Text("Furniture")
+                        .font(.title)
+                    Spacer()
 
-                    // Row 2 Title
-                    HStack {
-                        Spacer()
-                        Text("Furniture")
-                            .font(.title)
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                    }
-
-                    // Row 2 Buttons
+                    // Placeholder Furniture Row
                     HStack {
                         Spacer()
                         Button(action: {}) {
@@ -166,22 +144,11 @@ struct ShopNormalRoomView: View {
 
                     Spacer()
 
-                    // Row 3 Title
-                    HStack {
-                        Spacer()
-                        Text("Utilities")
-                            .font(.title)
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                    }
+                    Text("Utilities")
+                        .font(.title)
+                    Spacer()
 
-                    // Row 3 Buttons
+                    // Placeholder Utility Row
                     HStack {
                         Spacer()
                         Button(action: {}) {
@@ -238,8 +205,6 @@ struct ShopNormalRoomView: View {
                     }
 
                     Spacer()
-                    Spacer()
-                    Spacer()
                 }
                 .navigationTitle("Shop")
             }
@@ -248,5 +213,5 @@ struct ShopNormalRoomView: View {
 }
 
 #Preview {
-    ShopNormalRoomView()
+    ShopNormalRoomView(bedModel: CrappyBedModel())
 }
