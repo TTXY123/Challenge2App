@@ -20,7 +20,7 @@ struct Game1Level2ExplanationView: View {
                         .font(.title2)
                     Text("""
                     • How many times did you have to push the ball this time?
-                    • More times. This is because...insert sci-
+                    • More times. This is because the surface is rough, increasing friction between the ball and the surface.
                     """)
 
                         .font(.title2)
