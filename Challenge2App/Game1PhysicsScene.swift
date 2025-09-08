@@ -135,27 +135,44 @@ class Game1PhysicsScene: SKScene, SKPhysicsContactDelegate {
         if circle.contains(start) {
             circle.physicsBody?.applyForce(force)
         }
-
+        //  checks if the user's touch started inside the circle.
+        // If yes,  apply force to the circle
+        //how users move the circle
         touchStartPoint = nil
+        //after applying force, reset touch start point to nil (no longer tracking touch).
+
     }
 
-    // MARK: - SKPhysicsContactDelegate
+
 
     func didBegin(_ contact: SKPhysicsContact) {
+    //runs whenever two physics bodies collide. physic bodies r like stickman/circle etc.
+    // 'contact' contains information about the two bodies that touched.
+
         let bodyA = contact.bodyA
         let bodyB = contact.bodyB
+        // These lines gets the two bodies involved in the collision.
+
 
         // Check if circle contacts stickman
         if (bodyA.categoryBitMask == PhysicsCategory.circle && bodyB.categoryBitMask == PhysicsCategory.stickman) ||
             (bodyB.categoryBitMask == PhysicsCategory.circle && bodyA.categoryBitMask == PhysicsCategory.stickman) {
 
+            //  checks if one object is the circle and the other is the stickman
+            // checks both ways because bodyA could be either one.
+
             print("Player wins! Circle touched stickman!")
+            // Print a message to the console
 
-            // Notify SwiftUI game state
             gameState?.didWin = true
+            //  sets the game state to "win"
 
-            // Optionally pause the scene to stop further physics updates
             self.isPaused = true
+            // pauses the entire scene, stopping everythign
+            //to end game to go to next view
         }
     }
+
 }
+
+//each level has its own physics scene cos its diff for everything. thats how the slopes for all levels r diff.
